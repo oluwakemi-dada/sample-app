@@ -1,5 +1,5 @@
 import './App.css';
-import NewBooking from './components/NewBooking';
+import NewBooking from './components/new-booking/NewBooking';
 
 function App() {
   return (

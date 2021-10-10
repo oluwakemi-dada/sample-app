@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from '../sub-components/Navbar';
+import Navbar from '../../sub-components/Navbar';
 import { FaArrowLeft } from 'react-icons/fa';
+import Service from './Service';
 
 const MainHeading = styled.div`
   display: flex;
@@ -13,6 +14,7 @@ const ArrowLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
 const MainHeadingTitle = styled.div`
@@ -26,6 +28,10 @@ const HeadingParagraph = styled.p`
   margin-left: 15rem;
   font-weight: 300;
   margin-top: 1rem;
+`;
+
+const Container = styled.div`
+  margin: 4rem 15rem;
 `;
 
 const NewBooking = () => {
@@ -43,6 +49,9 @@ const NewBooking = () => {
       <HeadingParagraph>
         Fill in the information below to get a quote or create a new booking
       </HeadingParagraph>
+      <Container>
+        <Service />
+      </Container>
     </div>
   );
 };

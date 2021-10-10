@@ -4,7 +4,7 @@ import { FiSearch } from 'react-icons/fi';
 
 const Wrapper = styled.nav`
   background: #0746a7;
-  height: 8rem;
+  height: 7rem;
   color: #fff;
   display: grid;
   grid-template-columns: 0.16fr 0.32fr 0.52fr;
