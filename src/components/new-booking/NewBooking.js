@@ -4,6 +4,7 @@ import Navbar from '../../sub-components/Navbar';
 import { FaArrowLeft } from 'react-icons/fa';
 import Service from './Service';
 import Location from './Location';
+import CargoDetails from './CargoDetails';
 
 const MainHeading = styled.div`
   display: flex;
@@ -57,6 +58,7 @@ const NewBooking = () => {
       <Container>
         <Service />
         <Location />
+        <CargoDetails />
       </Container>
     </div>
   );
