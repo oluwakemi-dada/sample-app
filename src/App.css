@@ -16,6 +16,8 @@ body {
   line-height: 1.7;
   background-color: #f1f2f6;
   color: #000;
+  min-height: 100vh;
+  min-width: 100vw;
  
 }
 
@@ -23,8 +25,3 @@ ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-  
-}

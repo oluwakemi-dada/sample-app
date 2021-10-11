@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   background: #fff;
   border-radius: 2px;
   padding: 4rem 4rem 5rem 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
 `;
 
 const Heading = styled.div`
