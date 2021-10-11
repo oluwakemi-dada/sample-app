@@ -5,6 +5,7 @@ import { FaArrowLeft } from 'react-icons/fa';
 import Service from './Service';
 import Location from './Location';
 import CargoDetails from './CargoDetails';
+import AdditionalServices from './AdditionalServices';
 
 const MainHeading = styled.div`
   display: flex;
@@ -59,6 +60,7 @@ const NewBooking = () => {
         <Service />
         <Location />
         <CargoDetails />
+        <AdditionalServices />
       </Container>
     </div>
   );
