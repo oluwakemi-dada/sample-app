@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   background: #fff;
   border-radius: 2px;
-  padding: 4rem 4rem;
+  padding: 4rem 4rem 5rem 4rem;
   margin-bottom: 2rem;
   display: grid;
   grid-template-columns: 0.6fr 0.4fr;
@@ -71,6 +71,36 @@ const InputField = styled.div`
     border: 1.5px solid #0746a7;
   }
 
+  :hover .label {
+    display: block;
+    position: absolute;
+    padding: 0.8rem 0.5rem;
+    top: -2.37rem;
+    left: 0.8rem;
+    color: #000;
+    background: #fff;
+    /* transition: top 3s linear; */
+  }
+
+  :hover input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #fff;
+  }
+  :hover input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity: 1;
+  }
+  :hover input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #fff;
+    opacity: 1;
+  }
+  :hover input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #fff;
+  }
+
   > div:first-child {
     height: 100%;
     display: flex;
@@ -93,12 +123,7 @@ const InputField = styled.div`
   }
 
   label {
-    position: absolute;
-    padding: 0.8rem .5rem;
-    top: -2.37rem;
-    left: 0.8rem;
-    color: #000;
-    background: #fff;
+    display: none;
   }
 `;
 
@@ -106,7 +131,35 @@ const Kilogram = styled.div`
   color: #aaaaaa;
 `;
 
-const ItemRight = styled.div``;
+const ItemRight = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  p span {
+    color: #383838;
+  }
+`;
+
+const CargoToggle = styled.div`
+  background: ${(props) => (props.cargoTogglebar ? '#0746a7' : '#e0e0e0')};
+  height: 2.6rem;
+  width: 4.7rem;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  cursor: pointer;
+
+  div {
+    background: #fff;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin: 0.2rem 0.3rem;
+    margin-left: ${(props) => (props.cargoTogglebar ? '2.4rem' : '.3rem')};
+    transition: all .2s;
+  }
+`;
 
 const CargoDetails = () => {
   const [totalPack, setTotalPack] = useState({
@@ -115,6 +168,12 @@ const CargoDetails = () => {
   });
 
   const { totalDimension, packageDetails } = totalPack;
+
+  const [cargoTogglebar, setCargoTogglebar] = useState(false);
+
+  const onChangeCargoToggle = () => {
+    setCargoTogglebar(!cargoTogglebar);
+  };
 
   const onChangeTotalPackage = (data) => {
     if (data === 'totalDimension') {
@@ -156,21 +215,31 @@ const CargoDetails = () => {
         <Inputs>
           <InputField>
             <div>
-              <input type='text' placeholder='Total Volume' className='input' />
+              <input type='text' placeholder='Total Volume' />
               <Kilogram>Kg</Kilogram>
             </div>
             <label className='label'>Total Volume</label>
           </InputField>
           <InputField>
             <div>
-              <input type='text' placeholder='Total Weight' className='input' />
+              <input type='text' placeholder='Total Weight' />
               <Kilogram>Kg</Kilogram>
             </div>
             <label className='label'>Total Weight</label>
           </InputField>
         </Inputs>
       </ItemLeft>
-      <ItemRight></ItemRight>
+      <ItemRight>
+        <CargoToggle
+          cargoTogglebar={cargoTogglebar}
+          onClick={onChangeCargoToggle}
+        >
+          <div></div>
+        </CargoToggle>
+        <p>
+          Dangerous Cargo <span>(ex. Chemicals, Battery)</span>
+        </p>
+      </ItemRight>
     </Wrapper>
   );
 };

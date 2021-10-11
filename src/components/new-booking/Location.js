@@ -7,7 +7,7 @@ import { AiFillCalendar } from 'react-icons/ai';
 const Wrapper = styled.div`
   background: #fff;
   border-radius: 2px;
-  padding: 4rem 4rem;
+  padding: 4rem 4rem 5rem 4rem;
   margin-bottom: 2rem;
 `;
 
