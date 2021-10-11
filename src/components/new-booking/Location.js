@@ -9,12 +9,21 @@ const Wrapper = styled.div`
   border-radius: 2px;
   padding: 4rem 4rem 5rem 4rem;
   margin-bottom: 2rem;
+
+
+  @media (max-width: 1200px) {
+    padding: 4rem 2.5rem 5rem 2.5rem;
+  }
 `;
 
 const ImpExpFromTo = styled.div`
   display: grid;
   grid-template-columns: 0.16fr 0.42fr 0.42fr;
   grid-gap: 4rem;
+
+  @media (max-width: 1200px) {
+    grid-gap: 2rem;
+  }
 `;
 
 const InfoIcon = styled.div`
@@ -109,6 +118,10 @@ const DateTermsValue = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin-top: 3rem;
   grid-gap: 4rem;
+
+  @media (max-width: 1200px) {
+    grid-gap: 2rem;
+  }
 
   > * {
     height: 4rem;

@@ -6,6 +6,10 @@ const Wrapper = styled.div`
   border-radius: 2px;
   padding: 4rem 4rem 5rem 4rem;
   margin-bottom: 10rem;
+
+  @media (max-width: 1200px) {
+    padding: 4rem 2.5rem 5rem 2.5rem;
+  }
 `;
 
 const Heading = styled.div`
@@ -17,6 +21,7 @@ const Services = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3rem;
+  grid-column-gap: 3rem;
   margin-top: 4rem;
 `;
 

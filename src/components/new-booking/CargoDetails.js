@@ -9,6 +9,13 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 0.6fr 0.4fr;
   grid-gap: 7rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 4rem 2.5rem 5rem 2.5rem;
+
+  }
 `;
 
 const Heading = styled.div`
@@ -134,6 +141,7 @@ const Kilogram = styled.div`
 const ItemRight = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100%;
 
   p span {
     color: #383838;

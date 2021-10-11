@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   border-radius: 2px;
   padding: 4rem 4rem 5rem 4rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 1200px) {
+    padding: 4rem 2.5rem 5rem 2.5rem;
+  }
 `;
 
 const Heading = styled.div`
@@ -23,6 +27,10 @@ const Services = styled.div`
   grid-gap: 3rem;
   align-items: center;
   margin-top: 3rem;
+
+  @media (max-width: 1200px) {
+    grid-gap: 2rem;
+  }
 
   > * {
     overflow: hidden;

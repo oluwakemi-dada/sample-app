@@ -18,9 +18,21 @@ const ArrowLeft = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 1400px) {
+    width: 10rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 7rem;
+  }
+
   > * {
     margin-left: 4rem;
     cursor: pointer;
+
+    @media (max-width: 1200px) {
+      margin-left: 2rem;
+    }
   }
 `;
 
@@ -39,6 +51,14 @@ const HeadingParagraph = styled.p`
 
 const Container = styled.div`
   margin: 4rem 15rem;
+
+  @media (max-width: 1400px) {
+    margin: 4rem 10rem;
+  }
+
+  @media (max-width: 1200px) {
+    margin: 4rem 7rem;
+  }
 `;
 
 const NewBooking = () => {
