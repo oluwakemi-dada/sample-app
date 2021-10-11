@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navbar from '../../sub-components/Navbar';
 import { FaArrowLeft } from 'react-icons/fa';
 import Service from './Service';
+import Location from './Location';
 
 const MainHeading = styled.div`
   display: flex;
@@ -14,7 +15,11 @@ const ArrowLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+
+  > * {
+    margin-left: 4rem;
+    cursor: pointer;
+  }
 `;
 
 const MainHeadingTitle = styled.div`
@@ -51,6 +56,7 @@ const NewBooking = () => {
       </HeadingParagraph>
       <Container>
         <Service />
+        <Location />
       </Container>
     </div>
   );
