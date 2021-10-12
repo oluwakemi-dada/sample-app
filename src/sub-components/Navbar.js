@@ -10,7 +10,7 @@ const Wrapper = styled.nav`
   grid-template-columns: 0.16fr 0.32fr 0.52fr;
   align-items: center;
   padding: 0 4rem;
-  width: 100vw;
+  /* width: 100vw; */
 `;
 
 const Logo = styled.div`
