@@ -47,6 +47,14 @@ const HeadingParagraph = styled.p`
   margin-left: 15rem;
   font-weight: 300;
   margin-top: 1rem;
+
+  @media (max-width: 1400px) {
+    margin-left: 10rem;
+  }
+
+  @media (max-width: 1200px) {
+    margin-left:  7rem;
+  }
 `;
 
 const Container = styled.div`
